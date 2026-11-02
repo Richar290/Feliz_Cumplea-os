@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#E9DDCC">
+    <title>Feliz cumpleaños, Keila</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <audio id="backgroundMusic" loop>
+        <source src="cancion/cumple.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="musicButton" class="music-button" aria-label="Pausar música" hidden>
+        ♫
+    </button>
+
+    <main>
+
+        <!-- PORTADA -->
+        <section class="welcome-screen" id="welcomeScreen">
+            <div class="welcome-content">
+                <span class="eyebrow">UN DÍA MUY ESPECIAL</span>
+
+                <p class="small-intro">Hoy doy gracias a Dios por un año mas de tu vida</p>
+
+                <h1>¡Feliz cumpleaños,<br><span>Keila De Armas Guerra!</span></h1>
+
+                <p class="welcome-message">
+                    Hay personas que hacen más bonito el mundo
+                    simplemente con existir. Y tu eres una de ellas.
+                </p>
+
+                <button id="surpriseButton" class="main-button">
+                    Descubre tu sorpresa
+                    <span>→</span>
+                </button>
+
+                <span class="bottom-note">Una sorpresa preparada con cariño</span>
+            </div>
+        </section>
+
+        <!-- EXPERIENCIA -->
+        <div id="surpriseScreen" class="surprise-screen" hidden>
+
+            <!-- BIENVENIDA -->
+            <section class="content-section dedication-section" id="dedication">
+                <span class="eyebrow">PARA TI, MI KEILA</span>
+                <h2>Hoy es un día para celebrar</h2>
+
+                <p>
+                    Hoy no es un día cualquiera. Es una oportunidad para
+                    agradecer a Dios por tu vida, por tu sonrisa y por
+                    todas las cosas bonitas que te hacen ser quien eres.
+                </p>
+
+                <p>
+                    Preparé este pequeño espacio para recordarte lo
+                    especial y valiosa que eres, nunca lo olvides, vales mucho y eres una mujer muy hermosa y quiero desearte un cumpleaños lleno
+                    de alegría, amor y bendiciones mi keila.
+                </p>
+
+                <span class="section-ornament">✧</span>
+            </section>
+
+            <!-- GALERÍA -->
+            <section class="content-section gallery-section" id="gallery">
+                <span class="eyebrow">RECUERDOS ESPECIALES</span>
+                <h2>Momentos que merecen recordarse</h2>
+
+                <p class="section-description">
+                    Cada fotografía guarda un instante y una historia. Y es un recuerdo de tu vida que compartiste conmigo y son recuerdos que son importantes para mi.
+                    Aquí estan algunos recuerdos especiales de tu vida.
+                </p>
+
+                <div class="photo-album">
+                    <button id="previousPhoto" class="gallery-arrow" aria-label="Fotografía anterior">
+                        ‹
+                    </button>
+
+                    <div class="photo-frame">
+                        <img id="galleryImage" src="imagenes/01.jpeg" alt="Recuerdo especial de Keila">
+                        <span id="photoCounter">01 / 24</span>
+                    </div>
+
+                    <button id="nextPhoto" class="gallery-arrow" aria-label="Fotografía siguiente">
+                        ›
+                    </button>
+                </div>
+
+                <p class="gallery-hint">Desliza o utiliza las flechas para descubrir los recuerdos</p>
+            </section>
+
+            <!-- CARTA -->
+            <section class="content-section letter-section" id="letter">
+                <span class="eyebrow">UNAS PALABRAS PARA TI</span>
+                <h2>Una carta especial</h2>
+
+                <div class="letter-card">
+                    <p>Mi Querida y Hermosa Keila:</p>
+
+                    <p>
+                       El universo no volverá a crear algo como tú, ni en mil siglos repetirá tu mirada, porque eres la obra irrepetible que Dios pudo crear y darme el privilegio de conocer. 
+                    </p>
+
+                    <p>
+                        Gracias por tu amistad,por tu cariño, por los momentos
+                        compartidos y por cada sonrisa que me has regalado.
+                        Hay personas que llegan a nuestra vida y dejan
+                        recuerdos que se guardan con mucho cariño y tu eres unas de esas personas.
+                    </p>
+
+                    <p>
+                        Deseo que este nuevo año que Dios te permite cumplir, esté lleno de motivos
+                        para sonreír, sueños cumplidos y momentos que
+                        hagan feliz tu hermoso corazón.
+                    </p>
+
+                    <p class="letter-signature">
+                        Con mucho cariño, te mando un fuerte abrazo desde la distancia y besos mi keila, TE QUIERO MUCHOOO.
+                    </p>
+                </div>
+            </section>
+
+            <!-- BENDICIONES -->
+            <section class="content-section blessing-section" id="blessings">
+                <span class="eyebrow">UN DESEO PARA TU VIDA</span>
+                <h2>Que Dios guíe cada uno de tus pasos</h2>
+
+                <p>
+                    Que el Señor te conceda sabiduría para cada decisión,
+                    fortaleza para cada desafío y alegría para disfrutar
+                    cada nueva etapa de tu vida.
+                </p>
+
+                <blockquote>
+                    Dios te dice hoy: «Yo sé los planes que tengo para ti Keila, planes para tu bienestar y no para tu mal, a fin de darte un futuro lleno de esperanza. Yo, el Señor, lo afirmo.».
+                    <span>Jeremías 29:11 · DHH</span>
+                </blockquote>
+
+                <p>
+                    Que nunca te falten la fe, la esperanza y la certeza
+                    de que Dios tiene cuidado de ti y de nuestros deseos del corazon.
+                </p>
+            </section>
+
+            <!-- CIERRE -->
+            <section class="content-section final-section" id="finalMessage">
+                <span class="final-star">✧</span>
+
+                <p class="eyebrow">CON TODO MI CARIÑO</p>
+
+                <h2>¡Feliz cumpleaños, Mi Keila!</h2>
+
+                <p>
+                    Que este nuevo capítulo de tu vida esté lleno
+                    de momentos inolvidables y de muchas bendiciones.
+                </p>
+
+                <span class="final-decoration">Con cariño. Richard ♡</span>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

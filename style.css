@@ -1,0 +1,488 @@
+
+:root {
+    --madera-clara: #E9DDCC;
+    --marfil: #F7F2E9;
+    --beige: #D5BFA5;
+    --madera: #A98260;
+    --nogal: #76563F;
+    --dorado: #C6A779;
+    --texto: #655244;
+    --blanco: #FFFCF7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--marfil);
+    color: var(--texto);
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.8;
+}
+
+button {
+    font-family: inherit;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* PORTADA */
+
+.welcome-screen {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 22px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 50% 40%, rgba(255,255,255,.65), transparent 65%),
+        linear-gradient(145deg, #F7F2E9, #E9DDCC);
+}
+
+.welcome-screen::before,
+.welcome-screen::after {
+    content: "✧";
+    position: absolute;
+    color: var(--dorado);
+    font-size: 90px;
+    opacity: .45;
+}
+
+.welcome-screen::before {
+    top: 12%;
+    left: 12%;
+}
+
+.welcome-screen::after {
+    bottom: 12%;
+    right: 12%;
+}
+
+.welcome-content {
+    max-width: 700px;
+    position: relative;
+    z-index: 1;
+    animation: appear 1.2s ease both;
+}
+
+.eyebrow {
+    display: block;
+    color: var(--madera);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.small-intro {
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.welcome-content h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(48px, 9vw, 86px);
+    line-height: 1.12;
+    font-weight: 500;
+    color: var(--nogal);
+    margin-bottom: 25px;
+}
+
+.welcome-content h1 span {
+    color: var(--madera);
+    font-style: italic;
+}
+
+.welcome-message {
+    max-width: 490px;
+    margin: 0 auto 35px;
+    font-size: 16px;
+    color: var(--texto);
+}
+
+.main-button {
+    border: 1px solid var(--madera);
+    border-radius: 50px;
+    background: var(--nogal);
+    color: var(--blanco);
+    padding: 15px 30px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: .3s ease;
+    letter-spacing: .5px;
+}
+
+.main-button span {
+    margin-left: 12px;
+}
+
+.main-button:hover {
+    background: var(--madera);
+    transform: translateY(-3px);
+}
+
+.bottom-note {
+    display: block;
+    margin-top: 55px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--madera);
+}
+
+/* BOTÓN DE MÚSICA */
+
+.music-button {
+    position: fixed;
+    z-index: 20;
+    top: 22px;
+    right: 22px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 1px solid var(--dorado);
+    background: var(--blanco);
+    color: var(--nogal);
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 4px 18px rgba(80, 55, 35, .12);
+}
+
+/* SECCIONES */
+
+.surprise-screen {
+    width: 100%;
+}
+
+.content-section {
+    min-height: 75vh;
+    padding: 110px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.content-section h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    color: var(--nogal);
+    font-size: clamp(34px, 5vw, 52px);
+    line-height: 1.2;
+    margin-bottom: 28px;
+}
+
+.content-section > p {
+    max-width: 650px;
+    margin-bottom: 18px;
+    font-size: 16px;
+}
+
+.dedication-section {
+    background: var(--blanco);
+}
+
+.section-ornament {
+    color: var(--dorado);
+    font-size: 38px;
+    margin-top: 35px;
+}
+
+/* GALERÍA */
+
+.gallery-section {
+    background: var(--madera-clara);
+}
+
+.section-description {
+    margin-bottom: 40px;
+}
+
+.photo-album {
+    width: min(100%, 700px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+}
+
+.photo-frame {
+    width: min(100%, 490px);
+    padding: 12px;
+    background: var(--blanco);
+    border: 1px solid rgba(169, 130, 96, .25);
+    box-shadow: 0 15px 45px rgba(91, 67, 46, .16);
+    position: relative;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 520px;
+    display: block;
+    object-fit: contain;
+    background: #F1E9DE;
+}
+
+#photoCounter {
+    display: block;
+    padding: 10px 0 2px;
+    color: var(--madera);
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.gallery-arrow {
+    flex-shrink: 0;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid var(--madera);
+    background: var(--marfil);
+    color: var(--nogal);
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.gallery-arrow:hover {
+    background: var(--nogal);
+    color: white;
+}
+
+.gallery-hint {
+    margin-top: 24px;
+    font-size: 12px;
+    color: var(--madera);
+    letter-spacing: .5px;
+}
+
+/* CARTA */
+
+.letter-section {
+    background: var(--marfil);
+}
+
+.letter-card {
+    max-width: 720px;
+    width: 100%;
+    padding: 55px 60px;
+    background: var(--blanco);
+    border: 1px solid #E6D7C5;
+    box-shadow: 0 12px 35px rgba(91, 67, 46, .07);
+    text-align: left;
+}
+
+.letter-card p {
+    margin-bottom: 22px;
+    font-size: 16px;
+}
+
+.letter-card p:first-child {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    color: var(--nogal);
+}
+
+.letter-signature {
+    color: var(--madera);
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: 22px !important;
+    margin-top: 35px;
+}
+
+/* BENDICIONES */
+
+.blessing-section {
+    background: #E5D7C6;
+}
+
+.blessing-section blockquote {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    border-top: 1px solid var(--dorado);
+    border-bottom: 1px solid var(--dorado);
+    color: var(--nogal);
+    font-family: "Playfair Display", serif;
+    font-size: clamp(23px, 4vw, 32px);
+    font-style: italic;
+}
+
+.blessing-section blockquote span {
+    display: block;
+    margin-top: 15px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    letter-spacing: 2px;
+    color: var(--madera);
+}
+
+/* CIERRE */
+
+.final-section {
+    min-height: 85vh;
+    background: linear-gradient(145deg, #F7F2E9, #E9DDCC);
+}
+
+.final-star {
+    color: var(--dorado);
+    font-size: 55px;
+    margin-bottom: 25px;
+}
+
+.final-section h2 {
+    font-size: clamp(38px, 7vw, 65px);
+}
+
+.final-decoration {
+    margin-top: 35px;
+    font-family: "Playfair Display", serif;
+    font-size: 23px;
+    font-style: italic;
+    color: var(--madera);
+}
+
+/* ANIMACIÓN */
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* PANTALLAS PEQUEÑAS */
+
+@media (max-width: 600px) {
+    .content-section {
+        min-height: auto;
+        padding: 85px 22px;
+    }
+
+    .welcome-content h1 {
+        font-size: 53px;
+    }
+
+    .photo-album {
+        gap: 8px;
+    }
+
+    .photo-frame {
+        padding: 7px;
+    }
+
+    .photo-frame img {
+        height: 390px;
+    }
+
+    .gallery-arrow {
+        width: 36px;
+        height: 36px;
+        font-size: 23px;
+    }
+
+    .letter-card {
+        padding: 30px 24px;
+    }
+
+    .music-button {
+        top: 12px;
+        right: 12px;
+    }
+}
+
+
+/* ==========================================
+   DECORACIONES DE CUMPLEAÑOS
+========================================== */
+
+.birthday-decorations {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.floating-decoration {
+    position: absolute;
+    display: block;
+    font-size: 34px;
+    opacity: 0.65;
+    animation: floatingMovement 12s ease-in-out infinite alternate;
+    filter: drop-shadow(0 3px 5px rgba(118, 86, 63, 0.12));
+    user-select: none;
+}
+
+.floating-decoration:nth-child(4n) {
+    font-size: 42px;
+    opacity: 0.75;
+}
+
+.floating-decoration:nth-child(4n + 1) {
+    font-size: 30px;
+    opacity: 0.55;
+}
+
+.floating-decoration:nth-child(4n + 2) {
+    font-size: 38px;
+    opacity: 0.70;
+}
+
+.floating-decoration:nth-child(4n + 3) {
+    font-size: 27px;
+    opacity: 0.60;
+}
+
+@keyframes floatingMovement {
+    0% {
+        transform: translate3d(0, 0, 0) rotate(-12deg);
+    }
+
+    50% {
+        transform: translate3d(15px, -25px, 0) rotate(12deg);
+    }
+
+    100% {
+        transform: translate3d(-12px, 20px, 0) rotate(-8deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .floating-decoration {
+        font-size: 25px;
+    }
+
+    .floating-decoration:nth-child(4n) {
+        font-size: 30px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .floating-decoration {
+        animation: none;
+    }
+}
